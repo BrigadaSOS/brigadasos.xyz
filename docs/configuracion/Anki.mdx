@@ -3,18 +3,19 @@ sidebar_position: 1
 slug: anki
 title: Anki
 ---
+
 import CodeBlock from '@theme/CodeBlock';
 
-import ForgettingCurveExample from '../../assets/anki/forgetting_curve_example.png'
-import NewCardsStepExplanation from '../../assets/anki/new_card_steps_explanation.png'
-import StepsGeneralExample from '../../assets/anki/steps_general_example.png'
+import ForgettingCurveExample from '../../assets/anki/forgetting_curve_example.png';
+import NewCardsStepExplanation from '../../assets/anki/new_card_steps_explanation.png';
+import StepsGeneralExample from '../../assets/anki/steps_general_example.png';
 import AnkiFirstImage from '../../assets/anki/first_image.png';
 import AnkiMenuDeckImported from '../../assets/anki/menu_deck_imported.png';
 import AnkiCardFront from '../../assets/anki/card_front.png';
 import AnkiCardBack from '../../assets/anki/card_back.png';
 import AnkiDeckNumbers from '../../assets/anki/deck_numbers_example.png';
-import AnkiExplorerMenu from '../../assets/anki/anki_explorer_menu.png'
-import AnkiStatsFutureReviews from '../../assets/anki/future-reviews-menu.png'
+import AnkiExplorerMenu from '../../assets/anki/anki_explorer_menu.png';
+import AnkiStatsFutureReviews from '../../assets/anki/future-reviews-menu.png';
 import AnkiStatsCardCount from '../../assets/anki/card_count_menu.png';
 import AnkiPreferencesAppearance from '../../assets/anki/preferences_appearance.png';
 import AnkiPreferencesReviews from '../../assets/anki/preferences_reviews.png';
@@ -22,33 +23,36 @@ import AnkiTemplatePersonalization from '../../assets/anki/template-personalizat
 import DeckOptionsDailyLimits from '../../assets/anki/deck_options_daily_limits.png';
 import DeckOptionsNewCards from '../../assets/anki/deck_options_new_cards.png';
 import DeckOptionsLapses from '../../assets/anki/deck_options_lapses.png';
-import DeckOptionsAdvanced from '../../assets/anki/deck_options_advanced.png'
-import DeckOptionsRewards from '../../assets/anki/deck_options_rewards.png'
-import AjtJapaneseExample from '../../assets/anki/ajt_japanese_example.gif'
-import AjtJapaneseConfig from '../../assets/anki/ajtJapaneseConfig.json'
-import WebPAddonMenu from '../../assets/anki/webp_addon_menu.png'
-import TrueRetentionMenu from '../../assets/anki/true_retention_menu.png'
-import HeatmapExample from '../../assets/anki/heatmap_example.png'
-import PassFailExample from '../../assets/anki/pass_fail_example.png'
+import DeckOptionsAdvanced from '../../assets/anki/deck_options_advanced.png';
+import DeckOptionsRewards from '../../assets/anki/deck_options_rewards.png';
+import AjtJapaneseExample from '../../assets/anki/ajt_japanese_example.gif';
+import AjtJapaneseConfig from '../../assets/anki/ajtJapaneseConfig.json';
+import WebPAddonMenu from '../../assets/anki/webp_addon_menu.png';
+import TrueRetentionMenu from '../../assets/anki/true_retention_menu.png';
+import HeatmapExample from '../../assets/anki/heatmap_example.png';
+import PassFailExample from '../../assets/anki/pass_fail_example.png';
 
 # Anki
 
 ## ¿Qué es Anki?
+
 Anki es un programa para crear y estudiar tarjetas virtuales que de forma inteligente va a predecir cuándo es más probable que vaya a olvidar cierta información. Cuando eso esté a punto de ocurrir, le mostrará esa información para que pueda retenerla por un periodo de tiempo más largo. Tras cada repaso, el intervalo de revisión se hará más y más amplio hasta que ya no le sea necesario para poder recordar esa información. A esta técnica se le conoce como **sistema de repetición espaciada (SRS)** y por supuesto, Anki hace uso de ella.
 
 <div className="text--center">
-    <img className="round shadow" src={StepsGeneralExample} width="700" />
+  <img className="round shadow" src={StepsGeneralExample} width="700" />
 </div>
 
 Estudiar en Anki consiste de dos partes:
-* Aprender nuevas tarjetas.
-* Repasar tarjetas ya vistas.
 
-Aprender nuevas tarjetas es el primer paso cuando se empieza a usar Anki, donde se memoriza por primera vez el contenido mostrado en la tarjeta. Tras esto, se convertirá en una tarjeta de repaso. Cada día Anki creará una lista de tarjetas de repaso que estén próximas a olvidarse. 
+- Aprender nuevas tarjetas.
+- Repasar tarjetas ya vistas.
+
+Aprender nuevas tarjetas es el primer paso cuando se empieza a usar Anki, donde se memoriza por primera vez el contenido mostrado en la tarjeta. Tras esto, se convertirá en una tarjeta de repaso. Cada día Anki creará una lista de tarjetas de repaso que estén próximas a olvidarse.
 
 Estas pueden ser muchas o pocas, pero lo importante es completar **todos los repasos cada día** para asegurar que la tarjeta se estudie antes de olvidarla.
 
 ### ¿Por qué utilizarlo?
+
 El principal problema que muchos aprendices enfrentan al momento de aprender vocabulario es la cantidad abismal de palabras que existen en el Japonés. En números rápidos, siendo un nativo hispanohablante, probablemente conozca alrededor de ~15000 a ~30000 palabras. Para desenvolverse relativamente bien y con cierta comodidad en un idioma, no siendo exclusivo en el Japonés, necesitará conocer alrededor de ~8000 palabras. Además de eso, tal como se vio en la sección de [Vocabulario y Kanji](../guia-principal/Kanji_Vocabulary.mdx), las palabras están compuestas de kanjis, que se suma como trabajo extra al momento de aprender una nueva palabra.
 
 Entonces, ¿cómo es posible aprender una cantidad tan abismal de palabras sin tardar años?
@@ -58,33 +62,35 @@ Un método que puede que haya utilizado para estudiar en sus exámenes es el de 
 En lugar de pasar el día entero escribiendo listas y listas de vocabulario, mediante el uso de Anki podrá seguir una estrategia mucho más efectiva en tiempo y resultados, donde solo repasará estas palabras justo antes de que se olviden.
 
 <div className="text--center">
-    <img className="round shadow" src={ForgettingCurveExample} width="600" />
+  <img className="round shadow" src={ForgettingCurveExample} width="600" />
 </div>
 
 La gráfica superior muestra un concepto llamado **curva del olvido**. De forma natural, cuando esté aprendiendo una palabra nueva la retendrá en su **memoria a corto plazo**, por lo que es fácil que se le olvide. Siguiendo esta estrategia, al principio hará repasos más frecuentemente, y a medida que siga estudiando esta palabra pasará a su **memoria a largo plazo**. A partir de aquí, los intervalos serán cada vez más largos, ya que será menos probable que se le olvide.
 
 Contra lo que uno pudiera pensar intuitivamente, si quiere memorizar algo a largo plazo es mejor hacer **pocos repasos pero espaciados en el tiempo**, en lugar de muchos repasos en un intervalo corto de tiempo.
 
-
 ### ¿Por qué Anki y no otro SRS?
+
 Anki hoy en día es el mejor programa en el mercado que hace uso del sistema de repetición espaciada por tres razones:
-* Es extremadamente personalizable
-* Es multiplataforma (Windows, Mac, Linux, Android, iOS)
-* Cuenta con un soporte increíble por la comunidad.
+
+- Es extremadamente personalizable
+- Es multiplataforma (Windows, Mac, Linux, Android, iOS)
+- Cuenta con un soporte increíble por la comunidad.
 
 ### ¿Para qué me servirá Anki y para que no?
 
 **✅ Anki le servirá si:**
 
-* Desea acelerar su velocidad para memorizar vocabulario, gramática o kanjis.
-* Desea hacer un uso eficiente de su tiempo de estudio y reforzar el contenido que aprende mediante la inmersión.
+- Desea acelerar su velocidad para memorizar vocabulario, gramática o kanjis.
+- Desea hacer un uso eficiente de su tiempo de estudio y reforzar el contenido que aprende mediante la inmersión.
 
 **❌ Anki no le servirá si:**
 
-* Espera aprender Japonés únicamente con Anki, o le dedica más tiempo que a la inmersión.
-* No mantiene un hábito de utilizarlo diariamente.
+- Espera aprender Japonés únicamente con Anki, o le dedica más tiempo que a la inmersión.
+- No mantiene un hábito de utilizarlo diariamente.
 
 ## Instalación
+
 De forma oficial Anki está disponible para Windows, Mac y Linux, y puede ser descargado a través de este [sitio web](https://apps.ankiweb.net/) de forma gratuita.
 
 Ahora mismo hay dos variantes de la aplicación de escritorio: **Qt5** y **Qt6**. La versión **Qt6** tiene mejoras considerables en la interfaz y facilidad de uso, por lo que es la versión recomendada para todos los usuarios.
@@ -100,14 +106,14 @@ Para poder usar Anki, antes deberá conocer algunos conceptos básicos con los q
 La primera vez que abra Anki se encontrará con esta interfaz. En ella, una de las primeras cosas que podrá observar es la lista de mazos. Por ahora solo contará con un mazo **"Predeterminado"**.
 
 <div className="text--center">
-    <img className="shadow" src={AnkiFirstImage} width="600" />
+  <img className="shadow" src={AnkiFirstImage} width="600" />
 </div>
 
 Los mazos son, en esencia, un **grupo de tarjetas**. Un mazo podrá contener tarjetas de una categoría como podrían ser "Vocabulario" o "Gramática". Y cada mazo contiene sus propios ajustes, como la cantidad de tarjetas que quiere aprender por día. Así mismo, podrá crear mazos desde cero o descargar mazos hechos por la comunidad.
 
 Como parte de la configuración de Anki, descargue el siguiente mazo:
 
-* [Mazo de ejemplo para Anki - BrigadaSOS](https://github.com/brigadasos/anki-note-types/releases/latest/download/BrigadaSOS-Japanese.apkg)
+- [Mazo de ejemplo para Anki - BrigadaSOS](https://github.com/brigadasos/anki-note-types/releases/latest/download/BrigadaSOS-Japanese.apkg)
 
 Para importarlo, haga doble clic en el archivo o arrástrelo dentro de la ventana de Anki. Verá que el mazo **"Predeterminado"** ha sido reemplazado por el nuevo mazo llamado **"Inmersión"** que acabamos de añadir.
 
@@ -145,7 +151,6 @@ Desde el menú principal de Anki, en la barra superior verá un botón llamado *
   <img className="shadow" src={AnkiExplorerMenu} width="600" />
 </div>
 
-
 Si hace clic en una tarjeta, verá todos los **Campos** que la componen. Estos guardan la información que se muestra en [la tarjeta](#tarjetas). Si hace clic en cada campo, podrá modificar su valor por otro distinto.
 
 En guías posteriores ([Yomichan](/configuracion/yomichan)) se indicará como crear y añadir nuevas tarjetas que rellenen todos estos campos automáticamente, siguiendo el mismo patrón que la tarjeta del mazo de ejemplo.
@@ -162,19 +167,19 @@ Inicialmente, esta sección estará vacía. A medida que vaya estudiando le reco
 
 Esta gráfica le indicará cuantas tarjetas están programadas para el próximo día, y para días futuros. Le servirá para tener una idea de cuanto tiempo tendrá que dedicarle a Anki el día siguiente, y poder planear un hueco para hacer sus repasos.
 
-
 <div className="text--center">
   <img className="round shadow" src={AnkiStatsCardCount} width="400" />
 </div>
 
 Esta gráfica le indica el estado de todas las tarjetas de su mazo. En detalle, cada estado significa:
-* 🔵 **Nuevas**: Tarjetas nuevas que no ha visto anteriormente.
-* 🟠 **Aprendiendo**: Tarjetas nuevas que aún está aprendiendo.
-* 🔴 **Reaprendiendo**: Tarjetas que ha visto en días anteriores, pero no ha recordado y ha pulsado **"Otra vez"**.
-* 🟢 **Jóvenes**: Tarjetas que ha visto en días anteriores y está repasando, cuando su próximo intervalo sea menor a 21 días.
-* 🟣 **Maduras**: Tarjetas que ha visto en días anteriores y está repasando, cuando su próximo intervalo sea mayor a 21 días.
-* 🟡 **Suspendidas**: Las tarjetas marcadas como suspendidas se ignoran en el mazo, y Anki no las añade al estudio. Para clasificar una tarjeta como suspendida puede hacerlo desde el menú de **Explorar**.
-* ⚫ **Enterrados**: Tarjetas que se han suspendido provisionalmente por el día, y que se desuspenderán automáticamente al día siguiente. También puede enterrar una tarjeta desde el menú de **Explorar**.
+
+- 🔵 **Nuevas**: Tarjetas nuevas que no ha visto anteriormente.
+- 🟠 **Aprendiendo**: Tarjetas nuevas que aún está aprendiendo.
+- 🔴 **Reaprendiendo**: Tarjetas que ha visto en días anteriores, pero no ha recordado y ha pulsado **"Otra vez"**.
+- 🟢 **Jóvenes**: Tarjetas que ha visto en días anteriores y está repasando, cuando su próximo intervalo sea menor a 21 días.
+- 🟣 **Maduras**: Tarjetas que ha visto en días anteriores y está repasando, cuando su próximo intervalo sea mayor a 21 días.
+- 🟡 **Suspendidas**: Las tarjetas marcadas como suspendidas se ignoran en el mazo, y Anki no las añade al estudio. Para clasificar una tarjeta como suspendida puede hacerlo desde el menú de **Explorar**.
+- ⚫ **Enterrados**: Tarjetas que se han suspendido provisionalmente por el día, y que se desuspenderán automáticamente al día siguiente. También puede enterrar una tarjeta desde el menú de **Explorar**.
 
 Puede usar el número de tarjetas clasificadas como Maduras para hacerse una idea de cuantas palabras "conoce".
 
@@ -184,7 +189,6 @@ Desde el menú principal de Anki, si hace clic en el botón de **Sincronizar** e
 
 Es recomendable que lo haga, ya que mediante este botón podrá sincronizar los repasos, tarjetas, y cambios que haga entre varios dispositivos (ordenadores, móvil, etc).
 
-
 ## Configuración
 
 A continuación se incluye una **configuración recomendada** para Anki.
@@ -192,12 +196,13 @@ A continuación se incluye una **configuración recomendada** para Anki.
 ### Preferencias
 
 En el menú principal de Anki, en la barra de herramientas superior haga clic en `Herramientas > Preferencias...`, o pulse la combinación de teclas `Ctrl + P `. En el menu que se ha abierto, haga los siguientes cambios:
-* En la pestaña de **Apariencia**, la opción **Distracciones > Reducir el movimiento** debe estar **desactivada**. De esa forma se habilitarán animaciones y otro tipo de efectos en las tarjetas para que se vean mejor.
-* En la pestaña de **Repasos**, en la opción **Límite de estudio por adelantado** ponga `900`.
 
-<div style={{display: "flex", justifyContent: "space-evenly", flexWrap: "wrap"}}>
-<img className="shadow" src={AnkiPreferencesAppearance} width="400" />
-<img className="shadow" src={AnkiPreferencesReviews} width="400" />
+- En la pestaña de **Apariencia**, la opción **Distracciones > Reducir el movimiento** debe estar **desactivada**. De esa forma se habilitarán animaciones y otro tipo de efectos en las tarjetas para que se vean mejor.
+- En la pestaña de **Repasos**, en la opción **Límite de estudio por adelantado** ponga `900`.
+
+<div style={{ display: 'flex', justifyContent: 'space-evenly', flexWrap: 'wrap' }}>
+  <img className="shadow" src={AnkiPreferencesAppearance} width="400" />
+  <img className="shadow" src={AnkiPreferencesReviews} width="400" />
 </div>
 
 ### Opciones del mazo
@@ -208,55 +213,56 @@ Esto le abrirá la configuración asignada al mazo. Se recomienda cambiar estas 
 
 #### Límites diarios
 
-* **Tarjetas nuevas/día**: El número de tarjetas nuevas a aprender cada día. `20` es un buen valor de referencia que puede subir o bajar según como le vayan los repasos. Tenga cuidado de no poner un valor muy alto, pues eso provocará una gran cantidad de repasos en el futuro.
-* **Repasos máximo/día**: El número máximo de repasos que puede hacer en un día. Siempre deberá completar todos los repasos que Anki le marca, así le pondremos un valor absurdamente alto como `9999` para evitar que esta opción le oculte repasos.
+- **Tarjetas nuevas/día**: El número de tarjetas nuevas a aprender cada día. `20` es un buen valor de referencia que puede subir o bajar según como le vayan los repasos. Tenga cuidado de no poner un valor muy alto, pues eso provocará una gran cantidad de repasos en el futuro.
+- **Repasos máximo/día**: El número máximo de repasos que puede hacer en un día. Siempre deberá completar todos los repasos que Anki le marca, así le pondremos un valor absurdamente alto como `9999` para evitar que esta opción le oculte repasos.
 
 <div className="text--center">
-    <img className="round shadow" src={DeckOptionsDailyLimits} width="600" />
+  <img className="round shadow" src={DeckOptionsDailyLimits} width="600" />
 </div>
 
 #### Tarjetas nuevas
-* **Pasos en la etapa de aprendizaje**: Este campo marca cuantas veces y con qué intervalo aparecerá una tarjeta nueva. El valor recomendado es `38s 1m 5m 1h`.
-Para entender esta configuración mejor, puede verlo en la siguiente gráfica:
 
-<div style={{marginTop: -10}} className="text--center">
-    <img className="round shadow" src={NewCardsStepExplanation} width="600" />
+- **Pasos en la etapa de aprendizaje**: Este campo marca cuantas veces y con qué intervalo aparecerá una tarjeta nueva. El valor recomendado es `38s 1m 5m 1h`.
+  Para entender esta configuración mejor, puede verlo en la siguiente gráfica:
+
+<div style={{ marginTop: -10 }} className="text--center">
+  <img className="round shadow" src={NewCardsStepExplanation} width="600" />
 </div>
 
 Siguiendo la imágen, cada tarjeta nueva aparecerá **4 veces** en una sesión. Si en el último intervalo responde a la tarjeta con un **Bien**, la tarjeta pasará a ser una **tarjeta de repaso** y se moverá al día siguiente. Si en cualquier momento responde con **Otra vez**, la tarjeta se reseteará al primer intervalo.
 
 Igualmente, el último intervalo no significa que tendrá que esperar más de una hora hasta que pueda hacer todos los repasos. Como en las preferencias de Anki indicamos que el [Límite de estudio por adelantado](#preferencias) era de `900`, simplemente estas tarjetas aparecerán al final de la sesión de estudio, aunque aún no haya pasado una hora.
 
-* **Intervalo de graduación**: Este número le indica cuándo volverá a salir una tarjeta nueva cuando haya completado el último intervalo. El valor por defecto `1` (al día siguiente) es lo recomendado.
+- **Intervalo de graduación**: Este número le indica cuándo volverá a salir una tarjeta nueva cuando haya completado el último intervalo. El valor por defecto `1` (al día siguiente) es lo recomendado.
 
 <div className="text--center">
-    <img className="round shadow" src={DeckOptionsNewCards} width="600" />
+  <img className="round shadow" src={DeckOptionsNewCards} width="600" />
 </div>
 
 #### Olvidos
 
-* **Pasos de reaprendizaje**: Cuando falle una tarjeta de repaso, se le volverá a mostrar con el intervalo indicado en esta configuración. Los intervalos recomendados son `1m 5m 1h`.
-* **Intervalo mínimo**: Este número indica cuándo volverá a aparecer una tarjeta después de completar el último paso de reaprendizaje. Puede dejar la configuración por defecto de `1`.
-* **Umbral para sanguijuelas**: Hay tarjetas que inevitablemente costará más memorizar que otras. Cuando pulse en una tarjeta el botón **Otra vez** más de `8` veces en una sesión, como indica en la configuración, la tarjeta se marcará como **Sanguijuela**. Las tarjetas marcadas como sanguijuelas no tienen nada diferente, pero podrá filtrarlas en el menú de **Explorador** para repasarlas más en detalle si fuera necesario.
-* **Acción para sanguijuelas**: Como se indicó anteriormente, las tarjetas que pasen a ser sanguijuelas serán etiquetadas.
+- **Pasos de reaprendizaje**: Cuando falle una tarjeta de repaso, se le volverá a mostrar con el intervalo indicado en esta configuración. Los intervalos recomendados son `1m 5m 1h`.
+- **Intervalo mínimo**: Este número indica cuándo volverá a aparecer una tarjeta después de completar el último paso de reaprendizaje. Puede dejar la configuración por defecto de `1`.
+- **Umbral para sanguijuelas**: Hay tarjetas que inevitablemente costará más memorizar que otras. Cuando pulse en una tarjeta el botón **Otra vez** más de `8` veces en una sesión, como indica en la configuración, la tarjeta se marcará como **Sanguijuela**. Las tarjetas marcadas como sanguijuelas no tienen nada diferente, pero podrá filtrarlas en el menú de **Explorador** para repasarlas más en detalle si fuera necesario.
+- **Acción para sanguijuelas**: Como se indicó anteriormente, las tarjetas que pasen a ser sanguijuelas serán etiquetadas.
 
 <div className="text--center">
-    <img className="round shadow" src={DeckOptionsLapses} width="600" />
+  <img className="round shadow" src={DeckOptionsLapses} width="600" />
 </div>
 
 #### Avanzado
 
-* **Intervalo máximo**: Es el mayor intervalo que puede tener una tarjeta de repaso. Si el valor es muy pequeño puede interferir con el algoritmo de SRS, así que es recomendable poner un valor alto como `36500` (10 años).
-* **Facilidad inicial**: Multiplicador con el que empieza una tarjeta. Afecta a los intervalos (a más bajo, más cortos serán los intervalos entre repaso y repaso de cada tarjeta). El valor por defecto de `2.50` es el recomendable.
-* **Bonus para fácil**: Multiplicador que se suma a las tarjetas hace clic al botón **Fácil**. Más adelante instalaremos un complemento para desactivar este botón, ya que no lo usaremos. Puede poner `1.00` como valor.
-* **Modificador de intervalo**: Igual que la facilidad inicial, este modificador afecta directamente a qué tan corto o largo será un intervalo. Si no tiene problemas con los repasos y le gustaría dejar más tiempo entre intervalos, puede subirlo a un valor superior (hasta `1.2`).
-* **Interval difícil**: Igual que el **Bonus para fácil** explicado anteriormente. No usaremos este botón, así que puede poner un valor de `1.0`.
-* **Intervalo para nuevas**: Este valor indica cómo será el nuevo intervalo después de haber fallado una tarjeta de repaso. Por ejemplo, si falla una tarjeta con un intervalo de **100** días, tras pulsar **Otra vez** el siguiente intervalo será de **20** días (20%).
+- **Intervalo máximo**: Es el mayor intervalo que puede tener una tarjeta de repaso. Si el valor es muy pequeño puede interferir con el algoritmo de SRS, así que es recomendable poner un valor alto como `36500` (10 años).
+- **Facilidad inicial**: Multiplicador con el que empieza una tarjeta. Afecta a los intervalos (a más bajo, más cortos serán los intervalos entre repaso y repaso de cada tarjeta). El valor por defecto de `2.50` es el recomendable.
+- **Bonus para fácil**: Multiplicador que se suma a las tarjetas hace clic al botón **Fácil**. Más adelante instalaremos un complemento para desactivar este botón, ya que no lo usaremos. Puede poner `1.00` como valor.
+- **Modificador de intervalo**: Igual que la facilidad inicial, este modificador afecta directamente a qué tan corto o largo será un intervalo. Si no tiene problemas con los repasos y le gustaría dejar más tiempo entre intervalos, puede subirlo a un valor superior (hasta `1.2`).
+- **Interval difícil**: Igual que el **Bonus para fácil** explicado anteriormente. No usaremos este botón, así que puede poner un valor de `1.0`.
+- **Intervalo para nuevas**: Este valor indica cómo será el nuevo intervalo después de haber fallado una tarjeta de repaso. Por ejemplo, si falla una tarjeta con un intervalo de **100** días, tras pulsar **Otra vez** el siguiente intervalo será de **20** días (20%).
 
 Puede ver más información sobre la "facilidad" de las tarjetas y el cálculo de intervalos en [esta sección](#qué-es-la-facilidad-de-una-tarjeta-y-como-calcula-anki-el-siguiente-intervalo).
 
 <div className="text--center">
-    <img className="round shadow" src={DeckOptionsAdvanced} width="600" />
+  <img className="round shadow" src={DeckOptionsAdvanced} width="600" />
 </div>
 
 ### Personalizando el Tipo de Nota
@@ -266,7 +272,7 @@ Si es un usuario avanzado, quizás quiera cambiar parte de la información que s
 Para ello, desde el menú principal de Anki vaya a `Herramientas > Administrar tipos de nota`, seleccione la tarjeta **BrigadaSOS Japanese**, y en el menú lateral derecho haga clic en `Tarjetas...`. Se abrirá el menú para personalizar la plantilla de la tarjeta.
 
 <div className="text--center">
-    <img className="shadow" src={AnkiTemplatePersonalization} width="800" />
+  <img className="shadow" src={AnkiTemplatePersonalization} width="800" />
 </div>
 
 En la parte de la izquierda verá que hay una serie de opciones de la plantilla que puede modificar:
@@ -304,6 +310,7 @@ En la parte de la izquierda verá que hay una serie de opciones de la plantilla 
     var atamadakaColor = "#b8502e"; // Rojo
     var nakadakaColor  = "#b8732e"; // Naranja
     var odakaColor     = "#2eb867"; // Verde
+
 </CodeBlock>
 </details>
 
@@ -326,14 +333,14 @@ Este complemento generará automáticamente las lecturas en furigana, los patron
 Una vez haya instalado el complemento, debe configurarlo para que funcione con nuestra tarjeta. Vaya a `Heramientas > Complementos`, haga doble clic en **AJT Japanese** y pegue el siguiente contenido en la nueva ventana que se ha abierto:
 
 <details>
-    <summary>Configuración del complemento</summary>
-    <CodeBlock>{JSON.stringify(AjtJapaneseConfig, null, 4)}</CodeBlock>
+  <summary>Configuración del complemento</summary>
+  <CodeBlock>{JSON.stringify(AjtJapaneseConfig, null, 4)}</CodeBlock>
 </details>
 
 También puede generar estas lecturas manualmente si va al menú **Explorar**, selecciona una tarjeta, hace clic en el campo **Vocab** y pulsa la tecla `Tab`. De igual manera, puede realizar este proceso en masa para todas las tarjetas si va al menú de **Explorar**, y en la barra superior hace clic en `Editar > AJT: Bulk generate`.
 
 <div className="text--center">
-    <img className="round shadow" src={AjtJapaneseExample} width="397"/>
+  <img className="round shadow" src={AjtJapaneseExample} width="397" />
 </div>
 
 #### [Straight Rewards](https://ankiweb.net/shared/info/957961234)
@@ -359,11 +366,10 @@ Con este complemento, lo que conseguirá es que al responder una tarjeta bien va
 Si tras instalar el complemento va a las [opciones del mazo](#opciones-del-mazo), verá una nueva sección para configurarlo. Le recomendamos que ponga los siguientes valores:
 
 <div className="text--center">
-    <img className="round shadow" src={DeckOptionsRewards} width="600"/>
+  <img className="round shadow" src={DeckOptionsRewards} width="600" />
 </div>
 
 Puede ver más información sobre la "facilidad" de las tarjetas y el cálculo de intervalos en [esta sección](#qué-es-la-facilidad-de-una-tarjeta-y-como-calcula-anki-el-siguiente-intervalo).
-
 
 #### [Pass/Fail](https://ankiweb.net/shared/info/876946123)
 
@@ -372,7 +378,7 @@ Este complemento elimina los botones **Difícil** y **Fácil**, dejando solo dos
 Esto simplifica las sesiones de repaso, ya que solo tendrá que evaluar si se sabe la tarjeta o no.
 
 <div className="text--center">
-    <img className="round shadow" src={PassFailExample} width="400"/>
+  <img className="round shadow" src={PassFailExample} width="400" />
 </div>
 
 #### [Review Heatmap](https://ankiweb.net/shared/info/1771074083)
@@ -382,7 +388,7 @@ Este complemento le mostrará una gráfica en el menú principal de Anki para ve
 Es muy útil para revisar los días estudiados y motivarla a que haga los repasos todos los días.
 
 <div className="text--center">
-    <img className="round shadow" src={HeatmapExample} width="600"/>
+  <img className="round shadow" src={HeatmapExample} width="600" />
 </div>
 
 #### [Paste Images as WebP](https://ankiweb.net/shared/info/1151815987)
@@ -392,7 +398,7 @@ A medida que vaya creando tarjetas con imágenes, estas ocuparán un espacio con
 Una vez haya instalado el complemento, si reinicia Anki podrá acceder a la configuración desde `AJT > WebP settings...` en la barra superior del menú principal. Estas son las opciones recomendadas:
 
 <div className="text--center">
-    <img className="shadow" src={WebPAddonMenu} width="400"/>
+  <img className="shadow" src={WebPAddonMenu} width="400" />
 </div>
 
 #### [True Retention](https://ankiweb.net/shared/info/613684242)
@@ -402,7 +408,7 @@ Este complemento le dará más información sobre qué tan bien está memorizand
 Para acceder al menú, debe mantener la tecla `Shift` pulsada mientras hace clic en el botón de **Estadísticas** del menú principal.
 
 <div className="text--center">
-    <img className="shadow" src={TrueRetentionMenu} width="600"/>
+  <img className="shadow" src={TrueRetentionMenu} width="600" />
 </div>
 
 ## Conclusión y recomendaciones
@@ -410,10 +416,11 @@ Para acceder al menú, debe mantener la tecla `Shift` pulsada mientras hace clic
 Si ha llegado hasta este punto, ya tiene Anki **configurado y listo** para sus estudios. En las siguientes guías verá como crear estas tarjetas a partir de vocabulario que encuentre durante su inmersión: anime, manga, novelas ligeras, novelas visuales...
 
 Como conclusión:
-* Haga todos los repasos cada día.
-* Evite tener un número de tarjetas nuevas diarias muy elevado. Eventualmente se le acumularán más repasos de los que podrá hacer.
-* Solo debe usar los botones **Bien** y **Otra vez** (o **Pass**/**Fail** si tiene el [complemento](#passfail)) instalado. Esto simplificará sus repasos y le evitará los problemas de **"Ease Hell"** mencionados en el complemento de [Straight Rewards](#straight-rewards).
-* Anki es una herramienta muy extensa, por lo que al principio es **complicada de entender**. Siga utilizándola y leyendo esta u otras guías para resolver las dudas que le surjan.
+
+- Haga todos los repasos cada día.
+- Evite tener un número de tarjetas nuevas diarias muy elevado. Eventualmente se le acumularán más repasos de los que podrá hacer.
+- Solo debe usar los botones **Bien** y **Otra vez** (o **Pass**/**Fail** si tiene el [complemento](#passfail)) instalado. Esto simplificará sus repasos y le evitará los problemas de **"Ease Hell"** mencionados en el complemento de [Straight Rewards](#straight-rewards).
+- Anki es una herramienta muy extensa, por lo que al principio es **complicada de entender**. Siga utilizándola y leyendo esta u otras guías para resolver las dudas que le surjan.
 
 El siguiente paso será configurar la extensión de navegador [Yomichan](/configuracion/yomichan).
 
@@ -425,7 +432,6 @@ El siguiente paso será configurar la extensión de navegador [Yomichan](/config
 
 En caso de que vea que está invirtiendo más tiempo en Anki del que pueda dedicarle, intente estudiar menos tarjetas diarias cada día. Lo recomendable es estudiar de **15 a 20 tarjetas nuevas**, pero puede reducir la cantidad a **5 o 10** sin ningún problema. Le llevará más tiempo completar los mazos, pero es preferible si eso le permite ser más consistente y completar todos sus repasos cada día.
 
-
 ### ¿Qué significan los números que aparecen a la derecha de un mazo?
 
 Cuando lleve un tiempo haciendo Anki, verá que aparecen varios números de diferentes colores al lado del mazo.
@@ -435,9 +441,10 @@ Cuando lleve un tiempo haciendo Anki, verá que aparecen varios números de dife
 </div>
 
 Los diferentes colores le indican el número de tarjetas de cada tipo a estudiar hoy:
-* 🔵 **Azul (Tarjetas nuevas a aprender)**: Estas son tarjetas que no ha estudiado previamente y verá por primera vez hoy. Este número viene dado por la opción **Tarjetas nuevas/día** en las [opciones del mazo](#límites-diarios).
-* 🔴 **Rojo (Tarjetas en reaprendizaje)**: Estas son tarjetas que ha visto anteriormente, pero no ha recordado y ha presionado el botón **Otra vez**.
-* 🟢 **Verde (Tarjetas a repasar)**: Estas son tarjetas que ha visto en días anteriores. El algoritmo de SRS ha determinado que están próximas a olvidarse y debería volver a repasarlas.
+
+- 🔵 **Azul (Tarjetas nuevas a aprender)**: Estas son tarjetas que no ha estudiado previamente y verá por primera vez hoy. Este número viene dado por la opción **Tarjetas nuevas/día** en las [opciones del mazo](#límites-diarios).
+- 🔴 **Rojo (Tarjetas en reaprendizaje)**: Estas son tarjetas que ha visto anteriormente, pero no ha recordado y ha presionado el botón **Otra vez**.
+- 🟢 **Verde (Tarjetas a repasar)**: Estas son tarjetas que ha visto en días anteriores. El algoritmo de SRS ha determinado que están próximas a olvidarse y debería volver a repasarlas.
 
 Siempre deberá realizar Anki hasta que los tres números bajen a **cero**.
 
@@ -477,13 +484,13 @@ El rango ideal de retención está entre el **80% y 90%**. No tiene que esperar 
 
 En la siguiente tabla tiene una serie de recomendaciones que podrá seguir según su porcentaje actual de retención.
 
-| Porcentaje 	 | Interpretación 	                                                                                                                                                             |
-|:------------:|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|    >95% 	    | **Retención excelente**. Considere hacer más tarjetas nuevas al día o estudiar contenido más difícil. 	                                                                      |
-|  85%-95% 	   | **Retención alta**. Siga con la misma configuración y mazos de estudio, ya que le están funcionando.   	                                                                     |
-|  75%-85% 	   | **Retención normal**. Considere hacer **menos** tarjetas nuevas durante un tiempo si está cerca del 75%.                                                                     |
-|  60%-75% 	   | **Retención baja**. Considere **no** hacer tarjetas nuevas durante un tiempo hasta que la retención suba, o pruebe a estudiar contenido más sencillo.                        |
-|     &lt;60%     | **Punto de quiebre**. Revise de nuevo la configuración de Anki para asegurar que los intervalos estén bien configurados, y asegúrese de hacer los repasos todos los días.  	 |
+| Porcentaje | Interpretación                                                                                                                                                            |
+| :--------: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|    >95%    | **Retención excelente**. Considere hacer más tarjetas nuevas al día o estudiar contenido más difícil.                                                                     |
+|  85%-95%   | **Retención alta**. Siga con la misma configuración y mazos de estudio, ya que le están funcionando.                                                                      |
+|  75%-85%   | **Retención normal**. Considere hacer **menos** tarjetas nuevas durante un tiempo si está cerca del 75%.                                                                  |
+|  60%-75%   | **Retención baja**. Considere **no** hacer tarjetas nuevas durante un tiempo hasta que la retención suba, o pruebe a estudiar contenido más sencillo.                     |
+|  &lt;60%   | **Punto de quiebre**. Revise de nuevo la configuración de Anki para asegurar que los intervalos estén bien configurados, y asegúrese de hacer los repasos todos los días. |
 
 ### ¿Debería memorizar cada palabra en Anki?
 
@@ -499,7 +506,7 @@ También debe considerar su nivel actual. Si acaba de empezar a crear tarjetas p
 
 Gran parte de la documentación y guías sobre Anki están en Inglés. Si quiere profundizar su conocimiento y no tiene problemas con el idioma, los siguientes enlaces pueden serle útiles:
 
-* Explicación sobre el SRS de Tatsumoto: https://tatsumoto-ren.github.io/blog/spaced-repetition.html
-* Setup para minar de Animecards: https://animecards.site/
-* Explicación sencilla del Ease Hell: https://tatsumoto-ren.github.io/blog/setting-up-anki.html#ease-hell
-* Optimizando Anki con "micropasos": https://cademcniven.com/posts/20210410/
+- Explicación sobre el SRS de Tatsumoto: https://tatsumoto-ren.github.io/blog/spaced-repetition.html
+- Setup para minar de Animecards: https://animecards.site/
+- Explicación sencilla del Ease Hell: https://tatsumoto-ren.github.io/blog/setting-up-anki.html#ease-hell
+- Optimizando Anki con "micropasos": https://cademcniven.com/posts/20210410/

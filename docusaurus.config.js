@@ -27,10 +27,10 @@ const config = {
   deploymentBranch: 'preview',
   plugins: [
     [
-      require.resolve("@easyops-cn/docusaurus-search-local"),
+      require.resolve('@easyops-cn/docusaurus-search-local'),
       {
         hashed: true,
-        language: ["es"],
+        language: ['es'],
         indexDocs: true,
         indexBlog: false,
         indexPages: false,

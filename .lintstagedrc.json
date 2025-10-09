@@ -1,0 +1,6 @@
+{
+  "*.{js,jsx,ts,tsx,mjs,cjs}": ["eslint --fix", "prettier --write"],
+  "*.{json,jsonc,yml,yaml}": ["prettier --write"],
+  "*.{css,scss}": ["prettier --write"],
+  "*.md": ["markdownlint-cli2 --fix", "prettier --write", "cspell --no-must-find-files"]
+}

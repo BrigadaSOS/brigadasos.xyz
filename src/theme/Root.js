@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Root({children}) {
+function Root({ children }) {
   return <>{children}</>;
 }
 

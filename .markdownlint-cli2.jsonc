@@ -1,0 +1,25 @@
+{
+  // Configuration for markdownlint-cli2
+  "config": {
+    // Default state for all rules
+    "default": true,
+
+    // MD013/line-length - Allow longer lines in markdown
+    "MD013": false,
+
+    // MD033/no-inline-html - Allow inline HTML (common in documentation)
+    "MD033": false,
+
+    // MD041/first-line-h1 - First line in file should be a top level heading
+    "MD041": false,
+
+    // MD046/code-block-style - Allow both fenced and indented code blocks
+    "MD046": false,
+  },
+
+  // Files to ignore
+  "ignores": ["node_modules", "build", ".docusaurus", "dist", ".cache"],
+
+  // Glob patterns for files to lint
+  "globs": ["**/*.md", "!node_modules", "!build", "!.docusaurus"],
+}
