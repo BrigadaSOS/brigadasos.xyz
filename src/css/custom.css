@@ -225,3 +225,53 @@ img {
 }
 
 /***************************************************************************************/
+
+/* Custom Search Bar Styles */
+/* Search input styling */
+.navbar__search-input {
+  background-color: var(--custom-background-color-highlight) !important;
+  border-radius: 4px !important; /* Less rounded borders */
+  background-image: none !important; /* Hide magnifying glass icon */
+  padding-left: 1rem !important; /* Adjust spacing since icon is hidden */
+}
+
+/* Reduce margin between search bar and Discord button */
+.navbar__search {
+  margin-right: 0.5rem !important;
+}
+
+html[data-theme='dark'] .navbar__search-input {
+  background-color: var(--custom-background-color-highlight) !important;
+  border: 1px solid #444 !important;
+}
+
+/* Remove the search icon from the CSS variable */
+:root {
+  --ifm-navbar-search-input-icon: none;
+}
+
+/* Style the dropdown/modal */
+html[data-theme='dark'] {
+  --search-local-modal-background: var(--custom-background-color-highlight);
+  --search-local-hit-background: var(--custom-background-color);
+}
+
+/* Search icon styling */
+.search-icon-container {
+  position: absolute;
+  right: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+}
+
+.search-icon {
+  opacity: 0.5;
+  color: var(--ifm-color-emphasis-600);
+}
+
+html[data-theme='dark'] .search-icon {
+  color: var(--ifm-color-emphasis-500);
+}

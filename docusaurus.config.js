@@ -1,8 +1,9 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+import { themes } from 'prism-react-renderer';
+const lightCodeTheme = themes.github;
+const darkCodeTheme = themes.dracula;
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -10,42 +11,43 @@ const config = {
     defaultLocale: 'es',
     locales: ['es'],
   },
-  title: 'Brigada SOS',
-  tagline: 'Dinosaurs are cool',
+  title: 'Brigada SOS!',
+  tagline: 'Guía de aprendizaje de Japonés mediante la inmersión con contenido nativo',
   url: 'https://brigadasos.xyz',
   baseUrl: '/',
   onBrokenLinks: 'ignore',
-  onBrokenMarkdownLinks: 'warn',
+  markdown: {
+    hooks: {
+      onBrokenMarkdownLinks: 'warn',
+    },
+  },
   favicon: 'img/favicon.ico',
-  organizationName: 'Natsume-197', // Usually your GitHub org/user name.
-  projectName: 'Natsume-197.github.io', // Usually your repo name.
+  organizationName: 'BrigadaSOS Japonés', // Usually your GitHub org/user name.
+  projectName: 'https://github.com/BrigadaSOS/brigadasos.xyz', // Usually your repo name.
   deploymentBranch: 'preview',
   plugins: [
-   
+    [
+      require.resolve("@easyops-cn/docusaurus-search-local"),
+      {
+        hashed: true,
+        language: ["es"],
+        indexDocs: true,
+        indexBlog: false,
+        indexPages: false,
+        docsRouteBasePath: ['/'],
+        docsDir: 'docs',
+      },
+    ],
   ],
-
-  scripts: [{
-    src: './src/js/analytics.js',
-    async: true,
-  }],
   presets: [
     [
       'classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
-        gtag: {
-          trackingID: 'G-4BNELQ9B0K',
-          anonymizeIP: true,
-        },
-        googleAnalytics: {
-          trackingID: 'UA-216507270-1',
-          anonymizeIP: true,
-        },
         docs: {
           routeBasePath: '/',
           sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
-          editUrl: 'https://github.com/Natsume-197/Natsume-197.github.io/tree/main/',
+          editUrl: 'https://github.com/BrigadaSOS/brigadasos.xyz/tree/main/',
         },
         blog: false,
         theme: {
@@ -58,28 +60,7 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      algolia: {
-        // If Algolia did not provide you any appId, use 'BH4D9OD16A'
-        appId: '0T5B44QTIC',
-  
-        // Public API key: it is safe to commit it
-        apiKey: 'be24869760df2d72cea750cde8d163eb',
-  
-        indexName: 'dev_brigadasos',
-  
-        // Optional: see doc section below
-        contextualSearch: true,
-  
-        // Optional: Specify domains where the navigation should occur through window.location instead on history.push. Useful when our Algolia config crawls multiple documentation sites and we want to navigate with window.location.href to them.
-        externalUrlRegex: 'external\\.com|domain\\.xyz',
-  
-        // Optional: Algolia search parameters
-        searchParameters: {},
-  
-        //... other Algolia params
-      },
-      
-      /** 
+      /**
       announcementBar: {
         id: 'support_us',
         content:
@@ -91,29 +72,27 @@ const config = {
 
       colorMode: {
         defaultMode: 'dark',
-        disableSwitch: false,
+        disableSwitch: true,
         respectPrefersColorScheme: false,
-
-    },
-      docs:{
-        sidebar:{
+      },
+      docs: {
+        sidebar: {
           autoCollapseCategories: true,
-          
         },
       },
-      tableOfContents:{
+      tableOfContents: {
         maxHeadingLevel: 5,
       },
       navbar: {
-        hideOnScroll: true,
+        hideOnScroll: false,
         title: 'Brigada SOS Japonés',
         logo: {
-          alt: 'Brigada SOS logo',
+          alt: 'logo',
           src: 'img/favicon.ico',
         },
         items: [
           {
-            href: 'https://github.com/Natsume-197/Natsume-197.github.io',
+            href: 'https://github.com/BrigadaSOS/brigadasos.xyz',
             position: 'right',
             className: 'navbar-item-github',
             'aria-label': 'GitHub repository',
@@ -132,4 +111,4 @@ const config = {
     }),
 };
 
-module.exports = config;
+export default config;
